@@ -69,12 +69,12 @@
             /* 2. Khi modal-overlay CÓ class .active, đẩy nút Chat lên cao */
             /* Cách 1: Dùng :has để kiểm tra toàn bộ body (ưu tiên) */
             body:has(#modal-overlay.active) div.fixed.bottom-6.right-6.z-\[60\] {
-                bottom: 64px !important;
+                bottom: 96px !important;
             }
 
             /* Cách 2: Dự phòng nếu nút chat nằm ngay sau modal trong HTML */
             #modal-overlay.active ~ div.fixed.bottom-6.right-6.z-\[60\] {
-                bottom: 64px !important;
+                bottom: 96px !important;
             }
         }
 
