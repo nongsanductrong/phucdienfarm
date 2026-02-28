@@ -777,18 +777,35 @@ function resetModalData() {
         }, 10);
     }
 
-    function closeStatusModal() {
-        const modal = document.getElementById('status-modal');
-        const content = document.getElementById('status-content');
+    // function closeStatusModal() {
+    //     const modal = document.getElementById('status-modal');
+    //     const content = document.getElementById('status-content');
         
-        content.classList.replace('scale-100', 'scale-95');
-        content.classList.replace('opacity-100', 'opacity-0');
+    //     content.classList.replace('scale-100', 'scale-95');
+    //     content.classList.replace('opacity-100', 'opacity-0');
         
-        setTimeout(() => {
-            modal.classList.add('hidden');
-        }, 300);
+    //     setTimeout(() => {
+    //         modal.classList.add('hidden');
+    //     }, 300);
+    // }
+    function closeStatusModal(event) {
+    // Ngăn chặn sự kiện click bị truyền ra modal sản phẩm phía sau
+    if (event && event.stopPropagation) {
+        event.stopPropagation();
     }
 
+    const modal = document.getElementById('status-modal');
+    const content = document.getElementById('status-content');
+    
+    if (!modal || !content) return; // Bảo vệ nếu phần tử không tồn tại
+
+    content.classList.replace('scale-100', 'scale-95');
+    content.classList.replace('opacity-100', 'opacity-0');
+    
+    setTimeout(() => {
+        modal.classList.add('hidden');
+    }, 300);
+}
 
     // 1. Điều khiển Modal chính sách
 function openPolicyModal() {
