@@ -58,6 +58,26 @@
             to { opacity: 0; transform: scale(0.9) translateY(20px); display: none; }
         }
 
+        /*Đẩy nút chat cao lên Chỉ áp dụng trên Mobile (dưới 768px) */
+       /* Chỉ áp dụng trên Mobile (dưới 768px) */
+        @media (max-width: 767px) {
+            /* 1. Tạo hiệu ứng trượt mượt mà cho nút Chat */
+            div.fixed.bottom-6.right-6.z-\[60\] {
+                transition: bottom 0.3s ease-in-out;
+            }
+
+            /* 2. Khi modal-overlay CÓ class .active, đẩy nút Chat lên cao */
+            /* Cách 1: Dùng :has để kiểm tra toàn bộ body (ưu tiên) */
+            body:has(#modal-overlay.active) div.fixed.bottom-6.right-6.z-\[60\] {
+                bottom: 64px !important;
+            }
+
+            /* Cách 2: Dự phòng nếu nút chat nằm ngay sau modal trong HTML */
+            #modal-overlay.active ~ div.fixed.bottom-6.right-6.z-\[60\] {
+                bottom: 64px !important;
+            }
+        }
+
 /* Modal */
         /* Hiệu ứng Glassmorphism Nâng cao */
         .glass-modal {
