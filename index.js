@@ -31,7 +31,7 @@ const products = [
         images: [
             "https://cdn.tgdd.vn/Products/Images/8820/309141/bhx/ngo-ri-50g-202306081021284021.jpg"
         ],
-        description: "Cách bảo quản ngò rí tươi ngon: Để bảo quản ngò rí tươi ngon lâu hơn, bạn có thể áp dụng các cách sau:Cho vào hộp nhựa hoặc túi zip: Rửa nhẹ ngò rí, để ráo nước hoàn toàn, sau đó cho vào hộp nhựa có lót giấy ăn hoặc túi zip và bảo quản trong ngăn mát tủ lạnh.Cắm vào nước: Cắt bớt phần gốc, cắm ngò rí vào một cốc nước nhỏ và bọc kín phần lá bằng túi nilon rồi cho vào tủ lạnh. Thay nước hàng ngày để giữ độ tươi.Bảo quản trong khăn ẩm: Rửa sạch ngò rí, trải đều lên một chiếc khăn ẩm, cuộn lại và cho vào túi nilon rồi bảo quản trong tủ lạnh."
+        description: "Cách bảo quản ngò rí tươi ngon: bạn cho vào hộp nhựa hoặc túi zip: Rửa nhẹ ngò rí, để ráo nước hoàn toàn, sau đó cho vào hộp nhựa có lót giấy ăn hoặc túi zip và bảo quản trong ngăn mát tủ lạnh.Cắm vào nước: Cắt bớt phần gốc, cắm ngò rí vào một cốc nước nhỏ và bọc kín phần lá bằng túi nilon rồi cho vào tủ lạnh. Thay nước hàng ngày để giữ độ tươi."
     },
     { 
         id: 4, 
@@ -44,7 +44,7 @@ const products = [
             "https://cdn.tgdd.vn/Products/Images/8820/299257/bhx/rau-hung-cay-khoang-100g-202401171123417598.jpg",
             "https://cdn.tgdd.vn/Products/Images/8820/299257/bhx/rau-hung-cay-khoang-100g-202401171123471465.jpg"
         ],
-        description: "Cách bảo quản rau húng cây tươi ngon Để bảo quản rau húng cây tươi ngon lâu hơn, bạn có thể áp dụng các cách sau: Cho vào túi zip hoặc hộp kín: Rửa nhẹ rau húng cây, để ráo nước hoàn toàn, sau đó cho vào túi zip hoặc hộp kín và bảo quản trong ngăn mát tủ lạnh. Cắm vào nước: Cắt bớt phần gốc, cắm rau húng cây vào một cốc nước nhỏ và bọc kín phần lá bằng túi nilon rồi cho vào tủ lạnh. Thay nước hàng ngày để duy trì độ tươi. Bọc giấy báo ẩm: Bọc rau húng cây trong giấy báo rồi cho vào túi nilon và bảo quản trong tủ lạnh. Giấy báo giúp hút ẩm và giữ rau tươi lâu hơn."
+        description: "Cách bảo quản rau húng cây tươi ngon Để bảo quản rau húng cây tươi ngon lâu hơn, bạn có thể áp dụng cách sau: Cho vào túi zip hoặc hộp kín: Rửa nhẹ rau húng cây, để ráo nước hoàn toàn, sau đó cho vào túi zip hoặc hộp kín và bảo quản trong ngăn mát tủ lạnh."
     },
     { 
         id: 5, 
