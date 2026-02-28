@@ -564,13 +564,9 @@ function updateProductTypeNote() {
     }
 
 
-async function handleCheckoutSubmit(event) {
-    // CHẶN sự kiện mặc định ngay dòng đầu tiên
-    if (event) {
-        event.preventDefault();
-        event.stopPropagation();
-    }
+async function handleCheckoutSubmit() {
     const scriptURL = 'https://script.google.com/macros/s/AKfycby0CsFCGt2MObMCySrN8jXiRSLk6tR3wL6K5p-KXEezjdFSxixGwJhLaIDPc_OgOjtN/exec';
+    
     // Tìm các nút bấm
     const btnDesktop = document.getElementById('btn-modal-submit');
     const btnMobile = document.querySelector('.md\\:hidden[onclick*="handleCheckoutSubmit"]'); 
@@ -752,6 +748,12 @@ function resetModalData() {
 
 //HÀM TRUYỀN DỮ LIỆU VÀO MODAL STATUS
     function showStatusModal(type, title, message) {
+
+        // CHỐT CHẶN 1: Dừng ngay lập tức mọi sự kiện đang lan truyền (Quan trọng cho Safari Mobile)
+        if (typeof event !== 'undefined') {
+            event.stopPropagation();
+            event.preventDefault();
+        }
         const modal = document.getElementById('status-modal');
         const content = document.getElementById('status-content');
         const iconBox = document.getElementById('status-icon-box');
@@ -775,6 +777,10 @@ function resetModalData() {
 
         // 3. Hiển thị modal với hiệu ứng
         modal.classList.remove('hidden');
+
+        // CHỐT CHẶN 2: Ép trình duyệt tập trung vào Modal thông báo, không cho phép tác động ra lớp nền
+        modal.style.zIndex = "9999"; // Đảm bảo nó luôn nằm trên cùng của mọi lớp khác
+
         setTimeout(() => {
             content.classList.remove('scale-95', 'opacity-0');
             content.classList.add('scale-100', 'opacity-100');
