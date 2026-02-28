@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phúc Điền Farm - Đối tác cung ứng nông sản dịch vụ</title>
+    <meta name="description" content="Đối tác cung ứng nông sản sỉ và lẻ tại Lâm Đồng">
+    <meta name="keywords" content="Phúc Điền Farm, nông sản giá sỉ, nông sản Đức Trọng, nguồn hàng rau củ Lâm Đồng, sỉ rau sạch bếp ăn công nghiệp, cung cấp rau củ Đà Lạt, Vietgap">
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Phúc Điền Farm",
+        "image": "LogoFinal.png",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "số 166, thôn Phú Lộc",
+            "addressLocality": "Đức Trọng",
+            "addressRegion": "Lâm Đồng",
+            "countryAddress": "VN"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 1.706031170336797, 
+            "longitude": 108.36997847989986
+        }
+        }
+        </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background: linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)), 
+                        url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=2000');
+            background-attachment: fixed; background-size: cover;
+        }
+        .harvest-gradient { background: linear-gradient(135deg, #1B5E20 0%, #4CAF50 100%); }
+        .glass-card { background: rgba(255, 255, 255, 0.75); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.3); }
+        .active-scale:active { transform: scale(0.96); transition: 0.1s; }
+        .no-scroll { overflow: hidden; }
+        #modal-overlay { display: none; }
+        #modal-overlay.active { display: flex; }
+    </style>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="icon" type="image/png" href="./favicon.png">
+    <link rel="apple-touch-icon" href="./favicon.png">
+</head>
+<body>
+<nav id="glass-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-white/30 h-16 lg:h-20">
+    
+    <div class="absolute inset-0 bg-white/80 backdrop-blur-[20px] shadow-sm transition-opacity duration-300" id="nav-bg"></div>
+    
+    <div class="max-w-7xl mx-auto px-3 md:px-4 relative z-10 h-full">
+        <div class="flex items-center justify-between h-full">
+            
+            <div class="flex items-center shrink-0 pr-2 md:pr-4 border-r border-gray-200/50">
+                <div class="flex items-center gap-3">
+                    <div class="flex flex-col">
+                        <span class="text-green-900 font-black text-sm lg:text-lg leading-none tracking-tighter uppercase">
+                            Phúc Điền
+                        </span>
+                        <span class="text-green-600 font-bold text-[12px] lg:text-xs tracking-[0.15em] lg:tracking-[0.2em] uppercase">
+                            FARM • LÂM ĐỒNG
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="flex-1 flex items-center justify-end md:justify-center gap-2 sm:gap-2 md:gap-10 h-full">
+                
+                <li>
+                    <a href="#benefits" class="nav-link text-[12px] md:text-sm font-bold text-gray-600 hover:text-green-700 uppercase tracking-tight md:tracking-wider transition-colors py-2 flex items-center">
+                        Về chúng tôi
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#section-products" class="bg-green-600 text-white px-3 py-1.5 md:px-5 md:py-2 rounded-full text-[12px] md:text-sm font-black uppercase tracking-wider hover:bg-green-700 active:scale-95 transition-all shadow-md shadow-green-200 flex items-center">
+                        Đặt hàng
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="#pricing-policy" class="nav-link text-[12px] md:text-sm font-bold text-gray-600 hover:text-green-700 uppercase tracking-tight md:tracking-wider transition-colors py-2 flex items-center">
+                        Ưu đãi & Biểu phí
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+<header class="relative h-[500px] lg:h-[600px] flex items-center justify-center overflow-hidden rounded-b-[3rem] shadow-2xl pt-16">
+    
+    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=2000" 
+         class="absolute inset-0 w-full h-full object-cover brightness-[0.7]">
+
+    <div class="absolute inset-0 bg-black/30 backdrop-blur-[1px]"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/40"></div>
+
+    <div class="relative z-10 text-center px-6 max-w-3xl">
+        <p class="text-green-400 font-bold tracking-[0.3em] mb-4 text-sm lg:text-base">
+            <span class="bg-green-900/40 px-3 py-1 rounded-md backdrop-blur-sm">LÂM ĐỒNG • VIETNAM</span>
+        </p>
+        
+        <h2 class="text-4xl lg:text-6xl font-black text-white uppercase mb-6 leading-[1.1] drop-shadow-2xl">
+            PHÚC ĐIỀN <span class="text-green-400">FARM</span>
+        </h2>
+
+        <div class="mb-8 max-w-2xl mx-auto">
+            <h1 class="text-white text-base lg:text-xl font-bold mb-4 drop-shadow-md uppercase tracking-wide">
+                Đối tác cung ứng nông sản giá sỉ
+            </h1>
+            
+            <div class="flex flex-wrap justify-center gap-x-4 gap-y-2 text-white/90 text-[11px] lg:text-sm font-medium border-t border-green-500/50 pt-4">
+                <span class="flex items-center gap-1.5 bg-black/20 px-2 py-1 rounded">
+                    <i class="fas fa-check-circle text-green-400"></i> SỈ & LẺ LINH HOẠT
+                </span>
+                <span class="flex items-center gap-1.5 bg-black/20 px-2 py-1 rounded">
+                    <i class="fas fa-box text-green-400"></i> ĐÓNG GÓI THƯƠNG HIỆU
+                </span>
+                <span class="flex items-center gap-1.5 bg-black/20 px-2 py-1 rounded">
+                    <i class="fas fa-truck text-green-400"></i> GIAO HÀNG TẬN NƠI
+                </span>
+            </div>
+        </div>
+
+        <div class="flex flex-wrap gap-4 justify-center">
+            <a href="#section-products" class="bg-green-600 text-white font-black px-8 py-3.5 rounded-xl border border-green-400/50 hover:bg-green-700 transition-all shadow-xl active-scale text-sm">
+                ĐẶT HÀNG TẠI ĐÂY
+            </a>
+            <button onclick="toggleChat()" class="bg-white/10 backdrop-blur-md text-white font-black px-8 py-3.5 rounded-xl border border-white/30 hover:bg-white/20 transition-all shadow-xl active-scale text-sm flex items-center gap-2">
+            <i class="fas fa-comments text-green-400"></i> LIÊN HỆ TƯ VẤN
+            </button>
+        </div>
+    </div>
+</header>
+<main class="max-w-7xl mx-auto px-4 py-12">
+<!-- Chào mời hợp tác -->
+        <section id="benefits" class="py-12 md:py-24 relative bg-slate-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        
+        <div class="text-center mb-10 md:mb-16">
+            <div class="flex justify-center mb-6">
+                <div class="w-32 h-32 md:w-40 md:h-40 bg-white rounded-[2rem] shadow-md border border-gray-100 flex items-center justify-center overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <img src="LogoFinal.png" alt="Phúc Điền Farm Logo" class="w-full h-full object-contain">
+                </div>
+            </div>
+
+            <h2 class="text-2xl md:text-4xl font-black text-green-900 mb-3 uppercase tracking-tight">
+                Chúng tôi cung ứng nông sản giá sỉ
+            </h2>
+            <div class="w-16 h-1.5 bg-orange-500 mx-auto rounded-full"></div>
+            <p class="mt-4 text-slate-800 font-bold text-xs md:text-base max-w-2xl mx-auto px-2 uppercase tracking-wider">
+                Giải pháp tối ưu cho: 
+                <span class="text-green-700">Quán ăn • Cửa hàng • Siêu thị</span>
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-8">
+            
+            <div class="glass-panel bg-white/80 backdrop-blur-md rounded-2xl p-5 lg:p-8 border border-white/60 shadow-md hover:shadow-xl transition-all duration-300 group">
+                <div class="flex items-center md:flex-col lg:flex-row gap-4 mb-4">
+                    <div class="w-12 h-12 shrink-0 rounded-xl bg-green-50 flex items-center justify-center text-green-600 shadow-inner group-hover:bg-green-600 group-hover:text-white transition-colors duration-300">
+                        <i class="fas fa-hand-holding-usd text-xl"></i>
+                    </div>
+                    <h4 class="text-lg font-black text-green-900 uppercase">Giá Gốc Tận Vườn</h4>
+                </div>
+                <ul class="text-slate-700 text-sm space-y-2 font-medium">
+                    <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-[10px]"></i> Nhập hàng không qua trung gian</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-[10px]"></i> Sản lượng ổn định quanh năm</li>
+                </ul>
+            </div>
+
+            <div class="glass-panel bg-white/80 backdrop-blur-md rounded-2xl p-5 lg:p-8 border border-white/60 shadow-md hover:shadow-xl transition-all duration-300 group">
+                <div class="flex items-center md:flex-col lg:flex-row gap-4 mb-4">
+                    <div class="w-12 h-12 shrink-0 rounded-xl bg-orange-50 flex items-center justify-center text-orange-500 shadow-inner group-hover:bg-orange-500 group-hover:text-white transition-colors duration-300">
+                        <i class="fas fa-box-open text-xl"></i>
+                    </div>
+                    <h4 class="text-lg font-black text-green-900 uppercase">Dịch Vụ Trọn Gói</h4>
+                </div>
+                <ul class="text-slate-700 text-sm space-y-2 font-medium">
+                    <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-[10px]"></i> Sơ chế & Đóng gói thương hiệu</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-[10px]"></i> Giao hàng tận nơi đúng tiến độ</li>
+                </ul>
+            </div>
+
+            <div class="glass-panel bg-white/80 backdrop-blur-md rounded-2xl p-5 lg:p-8 border border-white/60 shadow-md hover:shadow-xl transition-all duration-300 group">
+                <div class="flex items-center md:flex-col lg:flex-row gap-4 mb-4">
+                    <div class="w-12 h-12 shrink-0 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 shadow-inner group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                        <i class="fas fa-medal text-xl"></i>
+                    </div>
+                    <h4 class="text-lg font-black text-green-900 uppercase">Chuẩn Chất Lượng</h4>
+                </div>
+                <ul class="text-slate-700 text-sm space-y-2 font-medium">
+                    <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-[10px]"></i> Đạt chuẩn VietGAP, An toàn Thực phẩm</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-[10px]"></i> Tươi ngon, giữ chân thực khách</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+    <!-- Danh mục sản phẩm -->
+    <section id="section-products" class="py-16 bg-slate-50/50 relative z-10">
+    <div class="container mx-auto px-4 max-w-7xl">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+            <div class="text-left">
+                <span class="text-orange-500 font-bold uppercase tracking-widest text-sm">Nguồn hàng hôm nay</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-green-900 mt-2">Sản Phẩm Chào Bán</h2>
+                <div class="w-20 h-1.5 bg-green-500 mt-3 rounded-full"></div>
+            </div>
+
+            <div class="w-full md:w-80">
+                <div class="relative group">
+                    <input type="text" id="shopSearch" onkeyup="runFilter()" 
+                           placeholder="Tìm tên nông sản..." 
+                           class="w-full pl-11 pr-4 py-3.5 rounded-2xl bg-white border border-slate-200 outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm font-medium shadow-sm transition-all">
+                    <span class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-green-600 transition-colors">
+                        <i class="fas fa-search"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div id="wholesaleShop" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+            
+            <div class="shop-item bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 group cursor-pointer"
+                 data-name="Ớt Chỉ Thiên" data-price="45000">
+                
+                <div class="relative h-40 md:h-52 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1588252391459-4509100cc121?auto=format&fit=crop&q=80&w=600" 
+                         alt="Ớt Chỉ Thiên" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    
+                    <div class="absolute top-3 left-3">
+                        <span class="bg-green-600 text-white text-[12px] md:text-xs font-bold px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1">
+                            <span class="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></span> CÓ SẴN
+                        </span>
+                    </div>
+                </div>
+
+                <div class="p-4 md:p-5">
+                    <span class="text-[12px] text-gray-400 font-bold uppercase tracking-wider">📍 Tiền Giang - VietGAP</span>
+                    <h3 class="font-extrabold text-base md:text-lg text-slate-800 line-clamp-1 group-hover:text-green-700 transition-colors">Rau thơm Đức Trọng</h3>
+                    
+                    <div class="mt-3 flex items-center justify-between">
+                        <div>
+                            <p class="text-[12px] text-gray-500 font-medium">Giá sỉ đề xuất:</p>
+                            <p class="text-green-600 font-black text-lg">45.000đ<span class="text-xs font-normal text-gray-400">/kg</span></p>
+                        </div>
+                        <div class="w-10 h-10 rounded-full bg-orange-50 flex items-center justify-center text-orange-500 group-hover:bg-orange-500 group-hover:text-white transition-all">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shop-item bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 group opacity-90"
+                 data-name="Rau Húng Quế" data-price="25000">
+                
+                <div class="relative h-40 md:h-52 overflow-hidden grayscale-[0.5] group-hover:grayscale-0">
+                    <img src="https://images.unsplash.com/photo-1618375531912-867984fdf780?auto=format&fit=crop&q=80&w=600" 
+                         alt="Rau Húng Quế" 
+                         class="w-full h-full object-cover">
+                    
+                    <div class="absolute top-3 left-3">
+                        <span class="bg-amber-500 text-white text-[12px] md:text-xs font-bold px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1">
+                            <i class="far fa-clock"></i> CHỜ HÀNG
+                        </span>
+                    </div>
+                </div>
+
+                <div class="p-4 md:p-5 text-gray-400">
+                    <span class="text-[12px] font-bold uppercase tracking-wider">📍 Long An - GlobalGAP</span>
+                    <h3 class="font-extrabold text-base md:text-lg text-slate-500">Nông sản Vietgap</h3>
+                    
+                    <div class="mt-3 flex items-center justify-between">
+                        <div>
+                            <p class="text-[12px] font-medium italic">Dự kiến có hàng sau 2 ngày</p>
+                            <p class="text-slate-400 font-black text-lg italic underline">Liên hệ báo giá</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mt-8 p-5 bg-green-50 rounded-2xl border border-green-100 flex items-center gap-4">
+    <div class="w-10 h-10 shrink-0 rounded-full bg-green-600 flex items-center justify-center text-white shadow-sm">
+        <i class="fas fa-comments text-lg"></i>
+    </div>
+    <div class="flex-1">
+        <p class="text-[12px] md:text-sm text-green-900 font-medium leading-relaxed">
+            Bạn có nhu cầu mua hàng giá sỉ nhưng không tìm thấy trong danh mục? 
+            <span onclick="toggleChat()" class="block sm:inline text-green-700 font-black underline cursor-pointer hover:text-green-800 transition-colors">
+                Liên hệ trực tiếp với chúng tôi ngay
+            </span>
+        </p>
+    </div>
+</div>
+    </div>
+    </section>
+
+<!-- Ưu đãi và biểu phí -->
+    <section id="pricing-policy" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <div class="mb-12">
+                <span class="text-orange-500 font-bold uppercase tracking-widest text-sm">Chính sách B2B</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-green-900 mt-2">CHÍNH SÁCH ƯU ĐÃI & BIỂU PHÍ</h2>
+                <p class="text-gray-500 mt-2">Quyền lợi tối ưu dành cho đối tác đồng hành lâu dài cùng Phúc Điền Farm.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <div class="lg:col-span-2 space-y-8">
+                    <div class="p-1 md:p-6 rounded-3xl bg-slate-50 border border-slate-100">
+                        <h3 class="text-xl font-bold text-green-800 mb-6 flex items-center gap-2">
+                            <i class="fas fa-file-invoice-dollar"></i> 1. Biểu phí Hoàn thiện Đơn hàng
+                        </h3>
+
+                        <div class="mb-8">
+                            <h4 class="font-bold text-gray-700 mb-4 flex items-center gap-2">
+                                <span class="w-6 h-6 rounded bg-green-600 text-white flex items-center justify-center text-xs">A</span>
+                                Phí Vật tư Đóng gói
+                            </h4>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                <div class="bg-white p-4 rounded-2xl border border-gray-200 shadow-sm">
+                                    <p class="text-xs text-gray-400 uppercase font-bold">Túi Nilon</p>
+                                    <p class="text-xl font-bold text-green-600">500đ<span class="text-sm text-gray-500">/kg</span></p>
+                                    <p class="text-xs text-gray-500 mt-1">Gồm túi PE khổ lớn, nhãn, dây buộc</p>
+                                </div>
+                                <div class="bg-white p-4 rounded-2xl border border-gray-200 shadow-sm">
+                                    <p class="text-xs text-gray-400 uppercase font-bold">Thùng Carton</p>
+                                    <p class="text-xl font-bold text-green-600">15.000đ<span class="text-sm text-gray-500">/thùng</span></p>
+                                    <p class="text-xs text-gray-500 mt-1">Giao nội tỉnh, rau ít dập</p>
+                                </div>
+                                <div class="bg-white p-4 rounded-2xl border border-orange-200 shadow-sm bg-orange-50/30">
+                                    <p class="text-xs text-orange-600 uppercase font-bold">Thùng xốp + Đá gel</p>
+                                    <p class="text-xl font-bold text-orange-600">30.000đ<span class="text-sm text-gray-500">/thùng</span></p>
+                                    <p class="text-xs text-gray-500 mt-1">Đề xuất cho ngoại tỉnh</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="font-bold text-gray-700 mb-4 flex items-center gap-2">
+                                <span class="w-6 h-6 rounded bg-green-600 text-white flex items-center justify-center text-xs">B</span>
+                                Phí Vận chuyển (Theo km)
+                            </h4>
+                            <div class="space-y-3">
+                               <div class="p-5 bg-white rounded-3xl border border-gray-200 hover:border-green-300 transition-all shadow-sm mb-5">
+    <div class="flex items-center gap-2 mb-4">
+        <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-600">
+            <i class="fas fa-map-marked-alt text-sm"></i>
+        </div>
+        <p class="font-bold text-gray-800 uppercase text-sm tracking-wide">Phạm vi dưới 50km</p>
+    </div>
+
+    <div class="space-y-3">
+        <div class="flex items-center justify-between p-3 rounded-2xl bg-slate-50 border border-dashed border-slate-200 group/item hover:bg-white hover:border-green-200 transition-colors">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-slate-500 shadow-sm group-hover/item:text-green-600 transition-colors">
+                    <i class="fas fa-motorcycle text-lg"></i>
+                </div>
+                <div>
+                    <p class="text-sm font-bold text-gray-700">Giao bằng xe máy</p>
+                    <p class="text-[12px] text-gray-500 italic">Dành cho đơn hàng nhỏ</p>
+                </div>
+            </div>
+            <div class="text-right">
+                <p class="font-bold text-green-700">1.500đ - 2.000đ<span class="text-[12px] text-gray-400">/km</span></p>
+            </div>
+        </div>
+
+        <div class="flex items-center justify-between p-3 rounded-2xl bg-green-50/50 border border-dashed border-green-200 group/item hover:bg-white hover:border-green-300 transition-colors">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-green-600 shadow-sm">
+                    <i class="fas fa-truck text-lg"></i>
+                </div>
+                <div>
+                    <p class="text-sm font-bold text-gray-700">Giao bằng xe tải</p>
+                    <p class="text-[12px] text-gray-500 italic font-medium text-orange-600">Đơn sỉ số lượng lớn</p>
+                </div>
+            </div>
+            <div class="text-right">
+                <p class="font-bold text-green-700">12.000đ - 15.000đ<span class="text-[12px] text-gray-400">/km</span></p>
+                <p class="text-[12px] font-bold text-orange-500 uppercase mt-1">Giảm 20% đơn > 500kg</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="p-5 bg-white rounded-3xl border border-gray-200 hover:border-green-300 transition-all shadow-sm">
+    <div class="flex items-center gap-2 mb-4">
+        <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+            <i class="fas fa-route text-sm"></i>
+        </div>
+        <p class="font-bold text-gray-800 uppercase text-sm tracking-wide">Phạm vi trên 50km</p>
+    </div>
+
+    <div class="space-y-3">
+        <div class="flex items-center justify-between p-3 rounded-2xl bg-blue-50/30 border border-dashed border-blue-200 group/item hover:bg-white hover:border-blue-300 transition-colors">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-blue-600 shadow-sm">
+                    <i class="fas fa-shipping-fast text-lg"></i>
+                </div>
+                <div>
+                    <p class="text-sm font-bold text-gray-700">Gửi đối tác vận chuyển</p>
+                    <p class="text-[12px] text-gray-500 italic font-medium text-green-600">Miễn phí trung chuyển</p>
+                </div>
+            </div>
+            <div class="text-right">
+                <p class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-[12px] font-black uppercase tracking-tighter">
+                    FREE SHIP RA BẾN
+                </p>
+            </div>
+        </div>
+
+        <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
+            <p class="text-[12px] text-gray-500 italic leading-snug">
+                <i class="fas fa-info-circle mr-1 text-slate-400"></i>
+                Khách hàng tự thanh toán cước phí cho đơn vị vận chuyển tại điểm nhận (COD phí vận chuyển).
+            </p>
+        </div>
+    </div>
+</div>
+                            </div>
+                        </div>
+
+                       
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <h3 class="text-xl font-bold text-green-800 flex items-center gap-2 mb-2">
+                        <i class="fas fa-gift"></i> 2. Ưu đãi Gắn kết
+                    </h3>
+                    
+                    <div class="relative overflow-hidden group p-6 rounded-3xl bg-gradient-to-br from-orange-500 to-orange-600 text-white shadow-xl shadow-orange-200">
+                        <div class="absolute -right-4 -top-4 opacity-20 group-hover:scale-125 transition-transform">
+                            <i class="fas fa-bolt text-8xl"></i>
+                        </div>
+                        <div class="relative z-10">
+                            <span class="bg-white/20 px-3 py-1 rounded-full text-xs font-bold uppercase">Ưu tiên</span>
+                            <h4 class="text-xl font-bold mt-4 mb-2">Thanh Toán Siêu Tốc</h4>
+                            <p class="text-3xl font-black mb-4">GIẢM 1%</p>
+                            <p class="text-sm text-orange-50 leading-relaxed">
+                                Trừ trực tiếp vào tiền hàng khi hoàn tất thanh toán 100% ngay sau khi chốt đơn.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="relative overflow-hidden group p-6 rounded-3xl bg-gradient-to-br from-green-600 to-green-700 text-white shadow-xl shadow-green-200">
+                        <div class="absolute -right-4 -top-4 opacity-20 group-hover:scale-125 transition-transform">
+                            <i class="fas fa-handshake text-8xl"></i>
+                        </div>
+                        <div class="relative z-10">
+                            <span class="bg-white/20 px-3 py-1 rounded-full text-xs font-bold uppercase">Lâu dài</span>
+                            <h4 class="text-xl font-bold mt-4 mb-2">Đối Tác Thân Thiết</h4>
+                            <p class="text-3xl font-black mb-4">HOÀN 1%</p>
+                            <p class="text-sm text-green-50 leading-relaxed">
+                                Mỗi 1.000kg nhập hàng thành công/tháng sẽ được hoàn 1% vào ví điện tử cho đơn hàng sau.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="text-center p-4">
+                        <p class="text-gray-400 text-sm italic italic">"Cùng nhau phát triển bền vững"</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+<!-- Nút chat popup -->
+        <div class="fixed bottom-6 right-6 z-[60] flex flex-col items-end gap-4">  
+        <div id="chat-popup" class="hidden w-[320px] bg-white/80 backdrop-blur-xl border border-white/50 rounded-[2rem] shadow-2xl overflow-hidden transform transition-all duration-300 origin-bottom-right scale-90 opacity-0">
+            <div class="bg-gradient-to-r from-green-600 to-green-800 p-4 text-white flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <div class="relative">
+                        <div class="w-10 h-10 rounded-full bg-white p-0.5">
+                            <img src="https://ui-avatars.com/api/?name=Tu+Van&background=ebf8ee&color=166534" class="rounded-full w-full h-full object-cover">
+                        </div>
+                        <div class="absolute bottom-0 right-0 w-3 h-3 bg-green-400 border-2 border-green-700 rounded-full animate-pulse"></div>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm">CSKH Phúc Điền Farm</h4>
+                        <p class="text-[12px] opacity-90">Sẵn sàng hỗ trợ ngay!</p>
+                    </div>
+                </div>
+                <button onclick="toggleChat()" class="text-white/80 hover:text-white"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="p-5">
+                <div class="bg-white/60 p-3 rounded-xl rounded-tl-none text-sm text-gray-700 mb-4 shadow-sm border border-white">
+                    Chào bạn! 👋 <br>Để nhận báo giá sỉ tốt nhất, hãy để lại SĐT và loại nông sản bạn cần nhé!
+                </div>
+                
+                <div class="space-y-3">
+                <div class="relative">
+                    <input type="text" id="cus_phone" placeholder="Số điện thoại của bạn..." 
+                        class="w-full pl-4 pr-4 py-2 rounded-xl bg-gray-50 border border-gray-100 text-sm focus:outline-none focus:ring-2 focus:ring-green-500">
+                </div>
+
+                <div class="relative">
+                    <input type="text" id="cus_msg" placeholder="Tôi muốn đặt hàng theo tháng..." 
+                        class="w-full pl-4 pr-10 py-3 rounded-xl bg-gray-50 border border-gray-100 text-sm focus:outline-none focus:ring-2 focus:ring-green-500">
+                    
+                    <button onclick="sendToGoogleSheet()" class="absolute right-2 top-2 w-8 h-8 rounded-lg bg-green-600 text-white flex items-center justify-center hover:bg-green-700 transition-all">
+                        <i class="fas fa-paper-plane text-xs"></i>
+                    </button>
+            </div>
+        </div>
+            </div>
+        </div>
+
+        <button onclick="toggleChat()" class="group relative flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-green-500 to-green-700 text-white shadow-lg shadow-green-500/40 hover:scale-110 transition-transform duration-300">
+            <i class="fas fa-comment-dots text-2xl group-hover:hidden"></i>
+            <i class="fas fa-chevron-up text-2xl hidden group-hover:block"></i>
+            
+            <span class="absolute -inset-1 rounded-full border border-green-400 opacity-50 animate-ping"></span>
+        </button>
+        </div>
+<!-- modal lúc click vào sản phẩm -->
+        <div id="modal-overlay" class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-0 md:p-4 lg:p-8">
+            <div id="productModal" class="relative w-full md:w-[95%] lg:w-full max-w-7xl h-screen md:h-[92vh] bg-white md:rounded-3xl shadow-2xl flex flex-col overflow-hidden text-gray-800 transition-all duration-300">
+                <div class="relative w-full max-w-7xl h-[100vh] md:h-[90vh] glass-modal md:rounded-3xl z-50 flex flex-col overflow-hidden text-gray-800">   
+                    <div class="flex-none p-4 border-b border-gray-200 bg-white/80 backdrop-blur-md flex justify-between items-center z-20">
+                        <div>
+                            <h2 class="text-xl md:text-2xl font-bold text-green-900">Nông sản Đức Trọng</h2>
+                            <div class="flex items-center gap-2 mt-1">
+                                <span class="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full border border-green-200 font-bold"><i class="fas fa-map-marker-alt"></i> Đồng Tháp</span>
+                            </div>
+                        </div>
+                        <button class="w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center text-gray-500 transition-colors">
+                            <i class="fas fa-times text-xl"></i>
+                        </button>
+                    </div>
+
+                    
+                    <div id="modalContent" class="flex-1 overflow-y-auto custom-scroll mobile-padding-bottom">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                            <div class="p-6 md:p-8 border-b lg:border-b-0 lg:border-r border-white/50">
+                                
+                                <div class="mb-8">
+                                    <div class="relative group rounded-2xl overflow-hidden shadow-lg border border-white/60 cursor-zoom-in" onclick="openLightbox(this)">
+                                        <img id="mainImage" src="https://images.unsplash.com/photo-1591073113125-e46713c829ed?q=80&w=800" class="w-full h-64 md:h-80 object-cover transform group-hover:scale-105 transition-transform duration-500">
+                                        <div class="absolute bottom-3 right-3 bg-black/50 text-white text-xs px-3 py-1 rounded-full backdrop-blur-md">
+                                            <i class="fas fa-search-plus mr-1"></i> Phóng to
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-4 mt-4 justify-center">
+                                        <img onclick="changeImage(this)" src="https://images.unsplash.com/photo-1591073113125-e46713c829ed?q=80&w=200" class="w-20 h-20 rounded-xl object-cover border-2 border-green-500 cursor-pointer shadow-md hover:-translate-y-1 transition-all">
+                                        <img onclick="changeImage(this)" src="https://plus.unsplash.com/premium_photo-1675237626068-7c8702c2db22?w=200" class="w-20 h-20 rounded-xl object-cover border-2 border-transparent hover:border-green-500 cursor-pointer shadow-md hover:-translate-y-1 transition-all">
+                                        <div class="w-20 h-20 rounded-xl bg-gray-200 border-2 border-transparent hover:border-green-500 cursor-pointer flex items-center justify-center text-gray-500 shadow-md">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-5 bg-yellow-50/50 border border-yellow-200 rounded-2xl p-5 shadow-sm">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <span class="text-[13px] font-semibold text-gray-500">Giá bán lẻ thị trường:</span>
+                                        <span id="marketPriceDisplay" class="text-[13px] text-gray-400 line-through font-medium tracking-tight">45.000đ/kg</span>
+                                    </div>
+                                    
+                                    <div class="flex justify-between items-end mb-4 pb-4 border-b border-yellow-200/60">
+                                        <div class="flex flex-col">
+                                            <span class="text-[13px] font-bold text-green-800 leading-none">Giá sỉ đề xuất:</span>
+                                            <span class="inline-block w-fit mt-1.5 text-[12px] font-bold text-green-700 bg-green-100 px-2 py-0.5 rounded uppercase tracking-wider">Phổ thông</span>
+                                        </div>
+                                        <span id="currentPriceDisplay" class="text-3xl font-black text-green-600 leading-none tracking-tighter">28.000<span class="text-sm ml-0.5">đ/kg</span></span>
+                                    </div>
+
+                                    <div class="space-y-3">
+                                        <div class="flex items-start gap-3 text-[12.5px] leading-relaxed text-yellow-900 bg-white/70 p-3 rounded-xl border border-yellow-100 shadow-sm">
+                                            <i class="fas fa-info-circle mt-1 text-yellow-600 flex-shrink-0"></i>
+                                            <span>
+                                                Đây là giá đề xuất, giá nông sản có sự biến động theo ngày, bạn hãy liên hệ trực tiếp với chúng tôi để nhận báo giá chính xác và nhanh nhất.
+                                            </span>
+                                        </div>
+                                        
+                                        <div class="flex items-center gap-3 text-[12.5px] leading-relaxed text-blue-900 bg-blue-50/60 p-3 rounded-xl border border-blue-100 shadow-sm">
+                                            <i class="fas fa-calendar-star text-blue-600 flex-shrink-0"></i>
+                                            <span>
+                                                Đơn hàng theo tháng? <button type="button" class="font-bold underline text-blue-700 decoration-blue-300 underline-offset-2 active:text-blue-900" onclick="toggleChat()" >Liên hệ trực tiếp</button> để nhận bảng giá ưu đãi riêng.
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-6 bg-green-50/50 border border-green-100 rounded-2xl p-5">
+                                    <div class="flex items-center gap-2.5 mb-3 text-green-800 font-bold text-[14px] uppercase tracking-wide">
+                                        <i class="fas fa-seedling text-green-600"></i>
+                                        <span>Đặc điểm & Chất lượng</span>
+                                    </div>
+                                    
+                                    <div class="text-[13px] leading-relaxed text-slate-700 bg-white/80 p-4 rounded-xl border border-green-50 shadow-inner">
+                                        <p id="productDescription" class="italic min-h-[1.5em]">
+                                            </p>
+                                    </div>
+                                </div>
+                        </div> 
+                        <div class="p-4 md:p-8 bg-white/30 backdrop-blur-sm">
+                            <div class="text-center mb-6">
+                                <h4 class="text-xl md:text-2xl font-bold text-green-900 inline-block border-b-4 border-green-500 pb-1 uppercase tracking-tight">Đăng Ký Đặt Hàng</h4>
+                            </div>
+
+                            <div class="space-y-4 mb-6">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-sm font-bold text-green-900 mb-1.5 flex items-center gap-2 ml-1">
+                                            <i class="fas fa-user text-green-600"></i> Họ tên
+                                        </label>
+                                        <input type="text" id="modal_cus_name" class="w-full bg-white/70 border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-500/20 transition-all shadow-sm" placeholder="Nguyễn Văn A" required>
+                                    </div>
+
+                                    <div>
+                                        <label class="block text-sm font-bold text-green-900 mb-1.5 flex items-center gap-2 ml-1">
+                                            <i class="fas fa-phone-alt text-green-600"></i> Số điện thoại
+                                        </label>
+                                        <input type="tel" id="modal_cus_phone" class="w-full bg-white/70 border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-500/20 transition-all shadow-sm" placeholder="09xxxxxxx" required>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label class="block text-sm font-bold text-green-900 mb-1.5 flex items-center gap-2 ml-1">
+                                        <i class="fas fa-map-marker-alt text-green-600"></i> Địa chỉ nhận hàng
+                                    </label>
+                                    <input type="text" id="modal_cus_address" class="w-full bg-white/70 border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-500/20 shadow-sm" placeholder="Số nhà, Tên đường, Quận/Huyện..." required>
+                                </div>
+                            </div>
+
+                            <div class="border-t border-gray-200 my-6"></div>
+
+                            <div class="space-y-5">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                    <div class="flex flex-col">
+                                        <label class="block text-sm font-bold text-green-900 mb-2.5 flex items-center gap-2 ml-1">
+                                            <i class="fas fa-layer-group text-green-600"></i> Loại sản phẩm
+                                        </label>
+                                        <div class="relative mb-2">
+                                            <select id="productType" onchange="updateProductTypeNote(); calculate()" 
+                                                class="w-full bg-slate-50 border border-slate-200 rounded-2xl px-4 py-3.5 text-sm font-semibold text-slate-700 focus:ring-2 focus:ring-green-500 focus:bg-white outline-none transition-all appearance-none cursor-pointer shadow-sm">
+                                                <option value="0" data-note="Sản phẩm canh tác truyền thống, không dùng thuốc cấm, quy trình truy xuất cơ bản. Phù hợp nhu cầu tiêu dùng hàng ngày, cân bằng giữa chất lượng và chi phí.">Phổ thông</option>
+                                                <option value="18" data-note="Sản phẩm có kiểm soát chất lượng, ghi chép nhật ký, kiểm soát dư lượng, có QR Code. Phù hợp khách hàng đề cao tính minh bạch và an toàn thực phẩm.">Kiểm soát</option>
+                                                <option value="32" data-note="Tiêu chuẩn cao nhất: Chứng nhận VietGAP, đánh giá độc lập. Phù hợp với khách hàng ưu tiên tiêu chuẩn khắt khe nhất trong hệ thống chất lượng.">Chứng nhận VietGAP</option>
+                                            </select>
+                                            <div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">
+                                                <i class="fas fa-chevron-down text-xs"></i>
+                                            </div>
+                                        </div>
+                                        
+                                        <div id="productTypeNote" class="p-3.5 rounded-xl bg-green-50 border border-green-100 shadow-sm transition-all duration-300">
+                                            <p class="text-[12px] text-green-800 leading-relaxed">
+                                                <i class="fas fa-info-circle mr-1 text-green-600"></i>
+                                                <span id="noteContent">Sản phẩm an toàn, không dùng thuốc cấm, quy trình truy xuất cơ bản.</span>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <label class="block text-sm font-bold text-green-900 mb-2.5 flex items-center gap-2 ml-1">
+                                            <i class="fas fa-weight-hanging text-green-600"></i> Khối lượng đặt hàng (Kg)
+                                        </label>
+                                        <div class="relative">
+                                            <input type="number" id="weight" oninput="calculate()" 
+                                                class="w-full bg-slate-50 border border-slate-200 rounded-2xl px-4 py-3.5 font-bold text-green-700 text-lg outline-none focus:ring-2 focus:ring-green-500 transition-all shadow-sm" 
+                                                required>
+                                            <div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
+                                                <span class="text-sm font-bold text-slate-400">kg</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                    <div>
+                                        <label class="block text-sm font-bold text-green-900 mb-2.5 flex items-center gap-2 ml-1">
+                                            <i class="fas fa-box-open text-green-600"></i> Quy cách đóng gói
+                                        </label>
+                                        <select id="packing" onchange="calculate()" 
+                                            class="w-full bg-slate-50 border border-slate-200 rounded-2xl px-4 py-3.5 text-sm font-semibold text-slate-700 outline-none focus:ring-2 focus:ring-green-500 transition-all shadow-sm">
+                                            <option value="nilon">Túi nilon tiêu chuẩn (500đ/kg)</option>
+                                            <option value="carton">Thùng giấy Carton (15.000đ/thùng)</option>
+                                            <option value="foam">Thùng xốp chuyên dụng (30.000đ/thùng)</option>
+                                        </select>
+                                        <div id="packingAlert" class="mt-2 p-2 bg-yellow-50 border border-yellow-200 text-yellow-700 text-[12px] rounded-lg hidden italic"></div>
+                                    </div>
+
+                                   <div>
+                                        <label class="block text-sm font-bold text-green-900 mb-2.5 flex items-center gap-2 ml-1">
+                                            <i class="fas fa-truck-loading text-green-600"></i> Khoảng cách giao hàng (Km)
+                                        </label>
+                                        <div class="relative">
+                                            <input type="number" id="distance" oninput="calculate()" 
+                                                class="w-full bg-slate-50 border border-slate-200 rounded-2xl px-4 py-3.5 text-lg font-bold text-green-700 outline-none focus:ring-2 focus:ring-green-500 transition-all shadow-sm" 
+                                                required>
+                                            <div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
+                                                <span class="text-sm font-bold text-slate-400">km</span>
+                                            </div>
+                                        </div>
+                                        <p class="mt-2 ml-1 text-xs text-slate-500 italic">
+                                            <i class="fas fa-map-marker-alt text-red-400 mr-1"></i>
+                                            Kho xuất hàng: số 166, đường Thống Nhất, Đức Trọng, Lâm Đồng</strong>
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <div class="pt-2">
+                                    <label class="block text-sm font-bold text-green-900 mb-3.5 flex items-center gap-2 ml-1">
+                                        <i class="fas fa-credit-card text-green-600"></i> Phương thức thanh toán
+                                    </label>
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                        <label class="relative flex items-center p-4 rounded-2xl border border-slate-200 bg-slate-50 cursor-pointer hover:border-green-500 transition-all active:scale-[0.98]">
+                                            <input type="radio" name="paymentMethod" value="cod" checked onchange="calculate()" class="w-5 h-5 text-green-600 focus:ring-green-500">
+                                            <div class="ml-3">
+                                                <span class="block text-sm font-bold text-slate-700">COD lúc nhận</span>
+                                                <span class="block text-[12px] text-slate-500">Thanh toán khi nhận hàng</span>
+                                            </div>
+                                        </label>
+
+                                        <label class="relative flex items-center p-4 rounded-2xl border border-slate-200 bg-slate-50 cursor-pointer hover:border-green-500 transition-all active:scale-[0.98]">
+                                            <input type="radio" name="paymentMethod" value="early" onchange="calculate()" class="w-5 h-5 text-green-600 focus:ring-green-500">
+                                            <div class="ml-3">
+                                                <span class="block text-sm font-bold text-slate-700">Thanh toán sớm</span>
+                                                <span class="block text-[12px] text-green-600 font-bold">Giảm ngay 1% tiền hàng</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <label class="block text-sm font-bold text-green-900 mb-1.5 flex items-center gap-2 ml-1">
+                                        <i class="fas fa-sticky-note text-green-600"></i> Ghi chú đơn hàng
+                                    </label>
+                                    <textarea 
+                                        id="modal_cus_note" 
+                                        rows="3" 
+                                        class="w-full bg-white/70 border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-500/20 shadow-sm transition-all resize-none" 
+                                        placeholder="Ví dụ: Giao sau 5h chiều, đóng gói kỹ giúp mình..."
+                                    ></textarea>
+                                </div>
+
+                                <div class="border-t border-gray-200 my-2"></div>
+                                <div class="bg-white rounded-2xl p-4 md:p-5 space-y-4 shadow-sm border border-slate-200">
+                                    <div class="flex justify-between items-center text-[14px] text-slate-700">
+                                        <span class="font-semibold">Tiền hàng gốc (<span id="displayQuality" class="text-green-700">Phổ thông</span>):</span>
+                                        <span id="displayBasePrice" class="font-bold text-slate-900 text-base">0đ</span>
+                                    </div> 
+                                    
+                                    <div id="paymentDiscountRow" class="flex justify-between items-center text-green-700 font-bold hidden bg-green-50 p-3 rounded-xl border border-green-200">
+                                        <span class="text-[13px] italic">Chiết khấu thanh toán sớm (-1%):</span>
+                                        <span id="displayPaymentDiscount" class="text-base">-0đ</span>
+                                    </div>
+                                    <div class="space-y-3 pt-3 border-t border-slate-200">
+                                        <div class="flex justify-between text-slate-700 text-[13px]">
+                                            <span class="font-semibold">Phí vật tư đóng gói:</span>
+                                            <span id="displayPackingFee" class="font-bold text-slate-800">0đ</span>
+                                        </div>
+                                        
+                                        <div class="space-y-3">
+                                            <div class="flex justify-between items-center text-slate-700 text-[13px]">
+                                                <div class="flex flex-wrap items-center gap-2">
+                                                    <span class="font-semibold">Vận chuyển (<span id="displayKM" class="text-green-700 font-bold">0</span> km):</span>
+                                                </div>
+                                                <span id="displayShippingFee" class="text-slate-800 font-bold">0đ</span>
+                                            </div>
+
+                                            <div id="shipSuggestion" class="hidden transition-all duration-300">
+                                                <div class="bg-blue-50 border border-blue-200 rounded-xl p-3 flex gap-3 items-start shadow-sm">
+                                                    <div class="mt-1 relative flex items-center justify-center flex-shrink-0">
+                                                        <div class="absolute w-2 h-2 bg-blue-500 rounded-full animate-ping"></div>
+                                                        <div class="relative w-3 h-3 bg-blue-600 rounded-full border-2 border-white"></div>
+                                                    </div>
+                                                    <div class="space-y-1">
+                                                        <h4 id="suggestionText" class="text-[12px] font-black text-blue-800 uppercase tracking-wide leading-none">...</h4>
+                                                        <p id="suggestionNote" class="text-[12px] text-blue-700 font-medium leading-relaxed"></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-5 bg-green-50/50 rounded-2xl border border-green-100 shadow-sm space-y-4">
+                                    <div class="flex justify-between items-center">
+                                        <span class="font-bold text-slate-500 uppercase text-[12px] tracking-wider">Tổng dự kiến:</span>
+                                        <div class="text-3xl font-black text-green-700">
+                                            <span class="finalTotalDisplay">0</span><span class="text-sm ml-1 uppercase">đ</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="bg-white/80 border border-dashed border-green-200 rounded-xl p-3 mb-5">
+                                        <p class="text-[12px] leading-relaxed text-slate-600">
+                                            <i class="fas fa-info-circle text-blue-500 mr-1"></i> 
+                                            Đây là <b>giá tạm tính</b> để quý khách ước tính ngân sách. 
+                                            <span class="text-green-700 font-bold">Phúc Điền Farm</span> sẽ liên hệ sớm để xác nhận đơn hàng và 
+                                            <b>báo giá chính xác</b>, việc này đảm bảo bạn có được những 
+                                            <span class="text-orange-600 font-bold text-[11px] uppercase">ưu đãi tốt nhất</span> nếu có.
+                                        </p>
+                                    </div>
+
+                                    <div class="px-1 py-1">
+                                        <label class="flex items-start gap-3 cursor-pointer group">
+                                            <div class="relative flex items-center mt-0.5 flex-shrink-0">
+                                                <input type="checkbox" id="policyAgreement" 
+                                                    class="peer h-6 w-6 cursor-pointer appearance-none rounded-md border-2 border-slate-400 checked:bg-green-600 checked:border-green-600 transition-all shadow-sm group-hover:border-green-500" 
+                                                    required>
+                                                <i class="fas fa-check absolute opacity-0 peer-checked:opacity-100 text-white text-sm left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"></i>
+                                            </div>
+                                            <span class="text-[13px] md:text-sm text-slate-900 font-medium leading-snug pt-0.5">
+                                                Tôi đã đọc và đồng ý với 
+                                                <button type="button" onclick="openPolicyModal()" class="text-orange-600 font-black underline hover:text-green-800 transition-colors">
+                                                    Chính sách bán hàng
+                                                </button> của Phúc Điền Farm.
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                    <button onclick="handleCheckoutSubmit()" 
+                                            id="btn-modal-submit"
+                                            class="hidden md:block w-full bg-green-600 text-white py-4 rounded-xl font-bold text-lg hover:bg-green-700 active:scale-[0.97] transition-all shadow-lg shadow-green-200 uppercase tracking-wide">
+                                        XÁC NHẬN ĐƠN HÀNG
+                                    </button>
+                                </div>
+
+                               
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+  
+            <div class="md:hidden flex-none p-4 bg-white border-t border-gray-200 shadow-[0_-5px_15px_rgba(0,0,0,0.05)] flex items-center justify-center gap-10 z-30">
+                <div class="flex flex-col">
+                            <span class="text-xs text-gray-500">Tạm tính:</span>
+                            <span class="finalTotalDisplay text-lg font-bold text-green-700">0 đ</span>
+                        </div>
+                        <button onclick="handleCheckoutSubmit()" class="bg-gradient-to-r from-green-600 to-green-500 text-white font-bold py-2 px-6 rounded-full shadow-md text-sm hover:bg-green-700">
+                            XÁC NHẬN ĐẶT HÀNG
+                        </button>
+            </div>     
+            </div>
+        </div>
+
+        <!-- Close lighitbox -->
+        <div id="lightbox" class="lightbox fixed inset-0 z-[60] bg-black/90 flex items-center justify-center p-4">
+                <button onclick="closeLightbox()" class="absolute top-5 right-5 text-white text-4xl hover:text-green-400">&times;</button>
+                <img id="lightbox-img" src="" class="max-w-full max-h-full rounded-lg shadow-2xl border-2 border-white/20">
+        </div>
+<!-- Modal trạng thái gửi đơn hàng -->
+    <div id="status-modal" class="fixed inset-0 z-[100] flex items-center justify-center hidden p-4">
+        <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+        
+        <div class="relative bg-white rounded-2xl shadow-2xl p-8 max-w-sm w-full text-center transform transition-all scale-95 opacity-0 duration-300" id="status-content">
+            <div id="status-icon-box" class="w-20 h-20 mx-auto mb-4 rounded-full flex items-center justify-center text-4xl">
+                </div>
+            <h4 id="status-title" class="text-xl font-bold mb-2"></h4>
+            <p id="status-message" class="text-gray-600 mb-6"></p>
+            <button onclick="closeStatusModal()" class="w-full py-3 rounded-xl font-bold text-white transition-all bg-green-600 hover:bg-green-700">
+                Đóng
+            </button>
+        </div>
+    </div>
+<!-- Modal chính sách bán hàng và hao hụt nông sản -->
+   <div id="policy-modal-overlay" class="fixed inset-0 z-[60] hidden items-center justify-center bg-black/70 backdrop-blur-sm p-4">
+    <div class="bg-white w-full max-w-md rounded-[2rem] shadow-2xl overflow-hidden animate-in fade-in zoom-in duration-300 flex flex-col max-h-[90vh]">
+        <div class="p-6 md:p-8 overflow-y-auto">
+            <div class="flex items-center gap-3 mb-5 border-b border-slate-100 pb-4">
+                <div class="w-10 h-10 bg-green-100 rounded-full flex-shrink-0 flex items-center justify-center text-green-600">
+                    <i class="fas fa-file-contract"></i>
+                </div>
+                <h3 class="text-lg font-black text-slate-800 uppercase tracking-tight">Chính sách bán hàng</h3>
+            </div>
+
+            <div class="space-y-4">
+                <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                    <h4 class="font-bold text-slate-800 mb-3 flex items-center gap-2 text-sm">
+                        <i class="fas fa-leaf text-green-600"></i> Quy định hao hụt & Chất lượng
+                    </h4>
+                    <ul class="space-y-2.5 text-[13px] text-slate-600 leading-snug">
+                        <li class="flex gap-2">• <span>Chấp nhận hao hụt khối lượng tự nhiên (bay hơi, mất nước) <b class="text-slate-900">< 5%</b>.</span></li>
+                        <li class="flex gap-2">• <span>Tỉ lệ dập nát do vận chuyển cho phép <b class="text-slate-900">< 5%</b>. Nếu vượt quá %, Phúc Điền Farm cam kết <b>bồi hoàn theo tỉ lệ thực tế</b>.</span></li>
+                        <li class="flex gap-2">• <span>Sản phẩm đảm bảo độ tươi khi tới tay khách hàng đạt <b class="text-slate-900">> 80%</b>.</span></li>
+                    </ul>
+                </div>
+
+                <div class="bg-blue-50 p-4 rounded-2xl border border-blue-100">
+                    <h4 class="font-bold text-blue-800 mb-2 flex items-center gap-2 text-sm">
+                        <i class="fas fa-video text-blue-600"></i> Quy định khiếu nại
+                    </h4>
+                    <p class="text-[13px] text-blue-800 leading-relaxed font-medium">
+                        Để đảm bảo quyền lợi tuyệt đối, quý khách vui lòng <span class="underline decoration-blue-300">quay video khi mở kiện hàng</span>. Phúc Điền Farm xin phép từ chối giải quyết các trường hợp thiếu hàng/hư hại nặng nếu không có video minh chứng rõ ràng.
+                    </p>
+                </div>
+
+                <div class="bg-orange-50 p-4 rounded-2xl border border-orange-100">
+                    <h4 class="font-bold text-orange-800 mb-3 flex items-center gap-2 text-sm">
+                        <i class="fas fa-truck-loading"></i> Thời gian & Phí vận chuyển
+                    </h4>
+                    <div class="space-y-2 text-[13px] text-orange-900 leading-relaxed mb-3">
+                        <p class="font-bold border-b border-orange-200 pb-1 inline-block">Dự kiến giao hàng:</p>
+                        <ul class="space-y-1 mt-1">
+                            <li class="flex justify-between"><span>Nội tỉnh/Lân cận:</span> <b>6h - 12h</b></li>
+                            <li class="flex justify-between"><span>Cùng khu vực miền:</span> <b>24h - 36h</b></li>
+                            <li class="flex justify-between"><span>Liên miền (Bắc-Nam):</span> <b>48h - 72h</b></li>
+                        </ul>
+                    </div>
+                    <p class="text-[12px] text-orange-700 leading-relaxed italic border-t border-orange-200 pt-3">
+                        * Đơn hàng >50km: Vui lòng cọc trước <b>2 lần phí vận chuyển</b> để xác nhận. Số tiền này sẽ được trừ trực tiếp khi tất toán đơn hàng.
+                    </p>
+                </div>
+            </div>
+
+            <button onclick="closePolicyModal()" class="w-full mt-6 bg-slate-900 text-white py-4 rounded-2xl font-bold text-base hover:bg-slate-800 active:scale-[0.98] transition-all shadow-lg">
+                ĐÃ HIỂU & ĐÓNG
+            </button>
+        </div>
+    </div>
+</div>
+</main>
+<footer class="relative mt-10 border-t border-gray-200 bg-gray-50 py-6">
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
+            class="absolute -top-5 right-6 w-10 h-10 bg-green-600 text-white rounded-full shadow-lg flex items-center justify-center hover:bg-green-700 transition-all z-10">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+            
+            <div class="flex items-center gap-3">
+                <h3 class="text-base font-bold text-green-900 whitespace-nowrap">Phúc Điền Farm</h3>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-x-4 gap-y-1 text-[13px] text-gray-600 font-medium">
+                <span class="flex items-center gap-1">
+                    <i class="fas fa-map-marker-alt text-green-600 text-[10px]"></i> Kho hàng nông sản: số 166, đường Thống Nhất, Đức Trọng, Lâm Đồng
+                </span>
+                <span class="hidden md:inline text-gray-300">|</span>
+                <span class="flex items-center gap-1">
+                    <i class="fas fa-building text-green-600 text-[10px]"></i> Văn phòng bán hàng: 512 đường Nguyễn Xiển, Long Bình TP. Hồ Chí Minh: 
+                </span>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="https://www.facebook.com/phucdienlamdong" target="_blank" class="text-green-700 hover:scale-110 transition-transform"><i class="fab fa-facebook-f text-lg"></i></a>
+                <a href="https://zalo.me/0353476966" target="_blank" class="text-green-700 font-black text-sm">Zalo</a>
+                <a href="tel:0353476966" class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-700"><i class="fas fa-phone-alt text-xs"></i></a>
+            </div>
+        </div>
+
+        <div class="mt-6 pt-4 border-t border-gray-100 text-center">
+            <p class="text-[10px] text-gray-400 uppercase tracking-widest">
+                &copy; 2026 PhucDienFarm.
+            </p>
+        </div>
+    </div>
+</footer>
+<script src="./index.js"></script>
+</body>
+</html>

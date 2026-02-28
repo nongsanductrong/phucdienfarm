@@ -1,0 +1,148 @@
+
+ /* Hiệu ứng mở rộng & Tối ưu Layout */
+                    /* Hiệu ứng ẩn hiện mượt cho Grid */
+            .wholesale-item {
+                transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+            }
+
+            /* Hiệu ứng focus cho Search Bar */
+            #wholesaleSearch:focus {
+                box-shadow: 0 10px 15px -3px rgba(34, 197, 94, 0.1);
+                transform: translateY(-1px);
+            }
+
+            /* Grid-to-List Layout (đã có trong HTML của bạn nhưng bổ sung gap mượt) */
+            @media (max-width: 768px) {
+                .wholesale-item .text-xl { font-size: 1.125rem; }
+                .wholesale-item .h-48 { height: 160px; }
+            }
+/* navbar va pop up khung chat*/
+        /* Enable Smooth Scroll cho toàn bộ trang */
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 5rem; /* Offset để header không che mất nội dung khi scroll tới */
+        }
+
+        /* Ẩn thanh cuộn cho Navbar trên Mobile nhưng vẫn scroll được */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Hiệu ứng mờ dần 2 bên khi scroll ngang trên mobile (Optional) */
+        .mask-linear {
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+
+        /* Animation cho Chat Popup */
+        .chat-open {
+            display: block !important;
+            animation: popIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .chat-close {
+            animation: popOut 0.2s ease-in forwards;
+        }
+
+        @keyframes popIn {
+            from { opacity: 0; transform: scale(0.9) translateY(20px); }
+            to { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        @keyframes popOut {
+            from { opacity: 1; transform: scale(1) translateY(0); }
+            to { opacity: 0; transform: scale(0.9) translateY(20px); display: none; }
+        }
+
+/* Modal */
+        /* Hiệu ứng Glassmorphism Nâng cao */
+        .glass-modal {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+        }
+
+        .glass-panel-inner {
+            background: rgba(255, 255, 255, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        /* Scrollbar tùy chỉnh */
+        .custom-scroll::-webkit-scrollbar { width: 6px; }
+        .custom-scroll::-webkit-scrollbar-thumb { background-color: rgba(22, 101, 52, 0.2); border-radius: 10px; }
+
+        /* Lightbox Animation */
+        .lightbox { opacity: 0; pointer-events: none; transition: all 0.3s ease; }
+        .lightbox.active { opacity: 1; pointer-events: auto; }
+        .lightbox img { transform: scale(0.9); transition: transform 0.3s ease; }
+        .lightbox.active img { transform: scale(1); }
+
+        /* Mobile Sticky Adjustments */
+        @media (max-width: 768px) {
+            .mobile-padding-bottom { padding-bottom: 100px; }
+        }
+          /* Đảm bảo Overlay che toàn màn hình và ẩn mặc định */
+            #modal-overlay {
+                display: none !important; /* Mặc định ẩn hoàn toàn */
+            }
+
+            /* Khi có class active, ép buộc hiển thị dạng flex */
+            #modal-overlay.active {
+                display: flex !important;
+            }
+
+            .no-scroll {
+                overflow: hidden !important;
+            }
+        /* Custom Slider Style */
+        .harvest-gradient {
+            background: linear-gradient(135deg, #166534 0%, #15803d 100%);
+        }
+
+        /* Range Input Custom Styling */
+        #order-qty::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 24px;
+            height: 24px;
+            background: #166534;
+            border: 4px solid white;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            #checkoutModal > div {
+                border-radius: 0;
+            }
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7); /* Màu trắng trong suốt */
+            backdrop-filter: blur(12px);          /* Hiệu ứng mờ nền phía sau */
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+/* footer */
+footer {
+    /* Đảm bảo nền footer không bị quá tối, làm nổi bật hiệu ứng blur */
+    background: linear-gradient(
+        to bottom, 
+        rgba(255, 255, 255, 0.1), 
+        rgba(255, 255, 255, 0.4)
+    );
+}
+
+/* Hiệu ứng di chuột cho các khối chi nhánh */
+.glass-panel-inner:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.7);
+}
