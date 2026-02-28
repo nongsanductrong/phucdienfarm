@@ -564,9 +564,13 @@ function updateProductTypeNote() {
     }
 
 
-async function handleCheckoutSubmit() {
+async function handleCheckoutSubmit(event) {
+    // CHẶN sự kiện mặc định ngay dòng đầu tiên
+    if (event) {
+        event.preventDefault();
+        event.stopPropagation();
+    }
     const scriptURL = 'https://script.google.com/macros/s/AKfycby0CsFCGt2MObMCySrN8jXiRSLk6tR3wL6K5p-KXEezjdFSxixGwJhLaIDPc_OgOjtN/exec';
-    
     // Tìm các nút bấm
     const btnDesktop = document.getElementById('btn-modal-submit');
     const btnMobile = document.querySelector('.md\\:hidden[onclick*="handleCheckoutSubmit"]'); 
@@ -777,35 +781,18 @@ function resetModalData() {
         }, 10);
     }
 
-    // function closeStatusModal() {
-    //     const modal = document.getElementById('status-modal');
-    //     const content = document.getElementById('status-content');
+    function closeStatusModal() {
+        const modal = document.getElementById('status-modal');
+        const content = document.getElementById('status-content');
         
-    //     content.classList.replace('scale-100', 'scale-95');
-    //     content.classList.replace('opacity-100', 'opacity-0');
+        content.classList.replace('scale-100', 'scale-95');
+        content.classList.replace('opacity-100', 'opacity-0');
         
-    //     setTimeout(() => {
-    //         modal.classList.add('hidden');
-    //     }, 300);
-    // }
-    function closeStatusModal(event) {
-    // Ngăn chặn sự kiện click bị truyền ra modal sản phẩm phía sau
-    if (event && event.stopPropagation) {
-        event.stopPropagation();
+        setTimeout(() => {
+            modal.classList.add('hidden');
+        }, 300);
     }
 
-    const modal = document.getElementById('status-modal');
-    const content = document.getElementById('status-content');
-    
-    if (!modal || !content) return; // Bảo vệ nếu phần tử không tồn tại
-
-    content.classList.replace('scale-100', 'scale-95');
-    content.classList.replace('opacity-100', 'opacity-0');
-    
-    setTimeout(() => {
-        modal.classList.add('hidden');
-    }, 300);
-}
 
     // 1. Điều khiển Modal chính sách
 function openPolicyModal() {
