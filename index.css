@@ -59,22 +59,19 @@
         }
 
         /*Đẩy nút chat cao lên Chỉ áp dụng trên Mobile (dưới 768px) */
-       /* Chỉ áp dụng trên Mobile (dưới 768px) */
+       /* Áp dụng cho màn hình Mobile (Dưới 768px) */
         @media (max-width: 767px) {
-            /* 1. Tạo hiệu ứng trượt mượt mà cho nút Chat */
+            /* 1. Đảm bảo nút chat có transition mượt mà */
             div.fixed.bottom-6.right-6.z-\[60\] {
-                transition: bottom 0.3s ease-in-out;
+                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
             }
 
-            /* 2. Khi modal-overlay CÓ class .active, đẩy nút Chat lên cao */
-            /* Cách 1: Dùng :has để kiểm tra toàn bộ body (ưu tiên) */
+            /* 2. Ép Safari nhận diện trạng thái qua body class */
+            /* Khi modal mở, body thường được thêm class no-scroll (như bạn đã gửi) */
+            body.no-scroll div.fixed.bottom-6.right-6.z-\[60\],
             body:has(#modal-overlay.active) div.fixed.bottom-6.right-6.z-\[60\] {
-                bottom: 96px !important;
-            }
-
-            /* Cách 2: Dự phòng nếu nút chat nằm ngay sau modal trong HTML */
-            #modal-overlay.active ~ div.fixed.bottom-6.right-6.z-\[60\] {
-                bottom: 96px !important;
+                bottom: 64px !important;
+                transform: translateY(0); /* Ép Safari render lại vị trí */
             }
         }
 
