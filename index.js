@@ -607,7 +607,7 @@ async function handleCheckoutSubmit() {
 
     // Kiểm tra nhanh thông tin bắt buộc
     if (!cusName || !cusPhone || !cusAddress || !distance || !weight) {
-        showStatusModal('error', 'Gửi thất bại', 'Vui lòng điền đủ Họ tên, SĐT, Địa chỉ nhận hàng, Khối lượng hàng và Vận chuyển!');
+        showStatusModal('error', 'Gửi thất bại', 'Vui lòng điền đủ Họ tên, SĐT, Địa chỉ nhận hàng và Khối lượng!');
         return;
     }
 
