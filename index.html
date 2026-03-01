@@ -663,7 +663,7 @@
                                         </label>
                                         <div class="relative">
                                             <input type="number" id="weight" oninput="calculate()" 
-                                                class="w-full bg-slate-50 border border-slate-200 rounded-2xl px-4 py-3.5 font-bold text-green-700 text-lg outline-none focus:ring-2 focus:ring-green-500 transition-all shadow-sm" 
+                                                class="w-full bg-slate-50 border border-slate-200 rounded-2xl px-4 py-3.5 font-bold text-green-700 text-sm outline-none focus:ring-2 focus:ring-green-500 transition-all shadow-sm" 
                                                 required>
                                             <div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
                                                 <span class="text-sm font-bold text-slate-400">kg</span>
@@ -692,14 +692,18 @@
                                         </label>
                                         <div class="relative">
                                             <input type="number" id="distance" oninput="calculate()" 
-                                                class="w-full bg-slate-50 border border-slate-200 rounded-2xl px-4 py-3.5 text-lg font-bold text-green-700 outline-none focus:ring-2 focus:ring-green-500 transition-all shadow-sm" placeholder="Tùy chọn nhập km hoặc bỏ quả" >
+                                                class="w-full bg-slate-50 border border-slate-200 rounded-2xl px-4 py-3.5 text-sm font-bold text-green-700 outline-none focus:ring-2 focus:ring-green-500 transition-all shadow-sm" placeholder="Tùy chọn: nhập km hoặc bỏ qua" >
                                             <div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
                                                 <span class="text-sm font-bold text-slate-400">km</span>
                                             </div>
                                         </div>
                                         <p class="mt-2 ml-1 text-xs text-slate-500 italic">
-                                            <i class="fas fa-map-marker-alt text-red-400 mr-1"></i>
-                                            Cửa hàng Phúc Điền Farm: 166 đường Thống Nhất, Đức Trọng, Lâm Đồng</strong>
+                                            <a href="https://www.google.com/maps/search/?api=1&query=Phúc+Điền+Farm+Đức+Trọng+Lâm+Đồng" 
+                                            target="_blank" 
+                                            class="hover:text-red-500 transition-colors cursor-pointer flex items-center">
+                                                <i class="fas fa-map-marker-alt text-red-400 mr-1"></i>
+                                                Cửa hàng Phúc Điền Farm - Lâm Đồng
+                                            </a>
                                         </p>
                                     </div>
                                 </div>
@@ -929,9 +933,13 @@
             </div>
 
             <div class="flex flex-wrap justify-center gap-x-4 gap-y-1 text-[13px] text-gray-600 font-medium">
-                <span class="flex items-center gap-1">
-                    <i class="fas fa-map-marker-alt text-green-600 text-[10px]"></i> Cửa hàng Phúc Điền Farm: 166 đường Thống Nhất, Đức Trọng, Lâm Đồng
-                </span>
+                <a href="https://www.google.com/maps/search/?api=1&query=Phúc+Điền+Farm+Đức+Trong+Lâm+Đồng" 
+                target="_blank" 
+                class="flex items-center gap-1 hover:text-green-700 transition-colors cursor-pointer">
+                    <span class="flex items-center gap-1">
+                        <i class="fas fa-map-marker-alt text-green-600 text-[10px]"></i> Cửa hàng Phúc Điền Farm: 144 đường Thống Nhất, Đức Trọng, Lâm Đồng
+                    </span>
+                </a>
                 <!-- <span class="hidden md:inline text-gray-300">|</span>
                 <span class="flex items-center gap-1">
                     <i class="fas fa-building text-green-600 text-[10px]"></i> Văn phòng bán hàng: 512 đường Nguyễn Xiển, Long Bình TP. Hồ Chí Minh: 

@@ -298,12 +298,42 @@ if (elFinalTotals.length > 0) {
     // Cập nhật vùng đề xuất vận chuyển
     // --- Cập nhật Badge & Khung đề xuất ---
     
+    // const sugBox = document.getElementById('shipSuggestion');
+    // const sugText = document.getElementById('suggestionText');
+    // const sugNote = document.getElementById('suggestionNote');
+
+    // if (distance > 0) {
+        
+    //     // 2. Khung đề xuất chi tiết
+    //     if (sugBox) {
+    //         sugBox.classList.remove('hidden');
+    //         if (sugText) sugText.innerText = suggestion;
+    //         if (sugNote) sugNote.innerText = shipNote;
+
+    //         // Đổi màu khung nếu là Miễn phí (>50km) cho trực quan
+    //         if (distance > 50) {
+    //             sugBox.firstElementChild.className = "bg-green-50/50 border border-green-100 rounded-xl p-3 flex gap-3 items-start";
+    //             sugText.className = "text-[12px] font-black text-green-700 uppercase tracking-wide leading-none";
+    //         } else {
+    //             sugBox.firstElementChild.className = "bg-blue-50/50 border border-blue-100 rounded-xl p-3 flex gap-3 items-start";
+    //             sugText.className = "text-[12px] font-black text-blue-700 uppercase tracking-wide leading-none";
+    //         }
+    //     }
+    // } else {
+    //     if (badge) badge.classList.add('hidden');
+    //     if (sugBox) sugBox.classList.add('hidden');
+    // }
+
+    // Cập nhật vùng đề xuất vận chuyển
+    // --- Cập nhật Badge & Khung đề xuất ---
+    
     const sugBox = document.getElementById('shipSuggestion');
     const sugText = document.getElementById('suggestionText');
     const sugNote = document.getElementById('suggestionNote');
+    // Kiểm tra xem badge có tồn tại không để tránh lỗi
+    const badge = document.getElementById('shipBadge'); 
 
     if (distance > 0) {
-        
         // 2. Khung đề xuất chi tiết
         if (sugBox) {
             sugBox.classList.remove('hidden');
@@ -312,16 +342,27 @@ if (elFinalTotals.length > 0) {
 
             // Đổi màu khung nếu là Miễn phí (>50km) cho trực quan
             if (distance > 50) {
-                sugBox.firstElementChild.className = "bg-green-50/50 border border-green-100 rounded-xl p-3 flex gap-3 items-start";
-                sugText.className = "text-[12px] font-black text-green-700 uppercase tracking-wide leading-none";
+                if (sugBox.firstElementChild) {
+                    sugBox.firstElementChild.className = "bg-green-50/50 border border-green-100 rounded-xl p-3 flex gap-3 items-start";
+                }
+                if (sugText) sugText.className = "text-[12px] font-black text-green-700 uppercase tracking-wide leading-none";
             } else {
-                sugBox.firstElementChild.className = "bg-blue-50/50 border border-blue-100 rounded-xl p-3 flex gap-3 items-start";
-                sugText.className = "text-[12px] font-black text-blue-700 uppercase tracking-wide leading-none";
+                if (sugBox.firstElementChild) {
+                    sugBox.firstElementChild.className = "bg-blue-50/50 border border-blue-100 rounded-xl p-3 flex gap-3 items-start";
+                }
+                if (sugText) sugText.className = "text-[12px] font-black text-blue-700 uppercase tracking-wide leading-none";
             }
         }
+        if (badge) badge.classList.remove('hidden');
     } else {
+        // --- PHẦN CHỈNH SỬA ĐỂ XÓA TRẮNG ---
         if (badge) badge.classList.add('hidden');
-        if (sugBox) sugBox.classList.add('hidden');
+        if (sugBox) {
+            sugBox.classList.add('hidden');
+            // Xóa sạch nội dung bên trong để lần sau nhập không bị dính chữ cũ
+            if (sugText) sugText.innerText = "";
+            if (sugNote) sugNote.innerText = "";
+        }
     }
         }
         // Gallery & Lightbox Logic
